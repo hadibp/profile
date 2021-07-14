@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto slab' , serif;
+}
+
+.morphing {
+  position: relative;
+  font-size: 120px;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  -webkit-filter: contrast(25) blur(1px);
+          filter: contrast(25) blur(1px);
+}
+
+.word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: word 16px infinite ease-in-out;
+          animation: word 16px infinite ease-in-out;
+}
+
+.word:nth-child(1) {
+  -webkit-animation-delay: -16px;
+          animation-delay: -16px;
+}
+
+.word:nth-child(2) {
+  -webkit-animation-delay: -14px;
+          animation-delay: -14px;
+}
+
+.word:nth-child(3) {
+  -webkit-animation-delay: -12px;
+          animation-delay: -12px;
+}
+
+.word:nth-child(4) {
+  -webkit-animation-delay: -10px;
+          animation-delay: -10px;
+}
+
+.word:nth-child(5) {
+  -webkit-animation-delay: -8px;
+          animation-delay: -8px;
+}
+
+.word:nth-child(6) {
+  -webkit-animation-delay: -6px;
+          animation-delay: -6px;
+}
+
+.word:nth-child(7) {
+  -webkit-animation-delay: -4px;
+          animation-delay: -4px;
+}
+
+@-webkit-keyframes word {
+  0%, 5%, 100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  20%, 80% {
+    -webkit-filter: blur(1rem);
+            filter: blur(1rem);
+    opacity: 0;
+  }
+}
+
+@keyframes word {
+  0%, 5%, 100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  20%, 80% {
+    -webkit-filter: blur(1rem);
+            filter: blur(1rem);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=Morphing.css.map */

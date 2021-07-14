@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import Bg from './componants/body/Bg';
 import './App.css';
+import Morphing from './componants/Morphing/Morphing';
+import Typing from './componants/Typing/Typing';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1> welcome to my profile</h1>
+     <Bg/>
+     <br/>
+     <br/>
+
+     {/* <Morphing/> */}
+
+     <Typing/>
+
+
     </div>
   );
 }
