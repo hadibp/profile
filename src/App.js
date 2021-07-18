@@ -15,7 +15,7 @@ function App() {
      <Typing/> <br />
      <br />
      <br /><br />
-     <p className="reach">Reach Me:</p>
+     {/* <p className="reach">Reach Me:</p> */}
      <br />
      <Icons/>
 

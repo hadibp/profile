@@ -15,7 +15,7 @@ function Icons() {
                 <li><a href="https://github.com/hadibp" target="_blank"><FaGithub/></a></li>
                 <li><a href="https://twitter.com/AbdulHa73514701" target="_blank"><FaTwitter/></a></li>
                 <li><a href="https://www.linkedin.com/in/abdul-hadi-bp-213131208/" target="_blank"><FaLinkedin/></a></li>
-                <li><a href="#" target="_blank"><FaWhatsapp/></a></li>
+                <li><a href="https://api.whatsapp.com/qr/K2L6WTVIQ6GJG1" target="_blank"><FaWhatsapp/></a></li>
                 {/* <li><a href="#"><MdCode/></a></li> */}
             </ul>
         </div>
