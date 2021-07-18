@@ -1,19 +1,29 @@
-import Bg from './componants/body/Bg';
-import './App.css';
-import Morphing from './componants/Morphing/Morphing';
 import Typing from './componants/Typing/Typing';
+import './App.css';
+import Icons from './componants/Icons/Icons';
 
 function App() {
+
+    
   return (
+    <div>
     <div className="App">
-     <h1> welcome to my profile</h1>
-     <Bg/>
-     <br/>
-     <br/>
+     {/* <h1> welcome to my profile</h1> */}
+     <br />
+     {/* <Card /> */}
 
-     {/* <Morphing/> */}
+     <Typing/> <br />
+     <br />
+     <br /><br />
+     <p className="reach">Reach Me:</p>
+     <br />
+     <Icons/>
 
-     <Typing/>
+     
+    </div>
+    
+
+
 
 
     </div>

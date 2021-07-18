@@ -1,0 +1,112 @@
+
+/* li{
+    list-style: none;
+    margin: 10px 30px;
+    display: inline-block;
+    font-size: 3rem;
+    color: rgb(143, 116, 116);
+    padding: 20px 20px;
+    
+    transition: .5s;
+
+} */
+.icons-body{
+    bottom: 10rem;
+    position: fixed;
+    /* margin-left: 6rem; */
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+ul li{
+    list-style: none;
+    margin: 0 5px;
+    display: inline-block;
+
+}
+ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    transition: 0.s;
+
+}
+ul li a:hover{
+    color: white;
+}
+ul li:nth-child(3) a:hover{
+    color: black;
+}
+
+
+ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-radius: 50%;
+    z-index: -1; 
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+ul li a:hover:before{
+transform: scale(1);
+ }
+
+ ul li:nth-child(1) a:hover:before{
+    background-color: #4267B2;
+ }
+ 
+ ul li:nth-child(2) a:hover:before{
+    background-color:  #C13584;;;
+ }
+
+ ul li:nth-child(3) a:hover:before{
+    background-color: white;
+ }
+
+ ul li:nth-child(4) a:hover:before{
+    background-color: #1DA1F2;
+ }
+
+ ul li:nth-child(5) a:hover:before{
+    background-color: #0077b5;
+ }
+ ul li:nth-child(6) a:hover:before{
+    background-color: #25D366;
+ }
+ /* ul li:nth-child(7) a:hover:before{
+    background-color: #25D366;
+ } */
+
+ /* /|using media quarry maxwidth 400px|/ */
+ @media screen and (max-width:540px) {
+    .icons-body{
+        bottom: 4rem;
+        position: fixed;
+        
+        margin-top: 3rem;
+    }
+
+ }
+ @media screen and (max-width:900px) {
+    .icons-body{
+        bottom: 7rem;
+        position: fixed;
+        margin-top: 4rem;
+        
+
+    }
+
+}

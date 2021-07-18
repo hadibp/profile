@@ -1,23 +1,30 @@
 import React from 'react'
+import Typical from 'react-typical'
 import './Typing.css'
+
 
 function Typing() {
     
 
 
     return (
-        <div className="body">
-        <div className="wrapper">
-            <div className="static-txt">I am</div>
-            <ul className="dynamic-txt">
-                <li><span>youtuber</span></li>
-                <li><span>devolper</span></li>
-                <li><span>student</span></li>
-                <li><span>convener</span></li>
-                <li><span>learner</span></li>
-            </ul>
+        <div>
+            <div className="image">
+  
             </div>
+        <br />
+        
+        <div className="typing" >
+        <p>
+            I am {" "}
+            <Typical
+        steps={['ABDUL HADI BP', 3000, 'React Developer', 3000 ,'Student',3000 ,'Convener of TECHSIAS '  ,3000]}
+        loop={Infinity}
+        wrapper="b"
+      /></p>
         </div>
+        </div>
+
     )
 }
 
