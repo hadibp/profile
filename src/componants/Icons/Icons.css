@@ -29,11 +29,11 @@ ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 45px;
     color: white;
     transition: 0.s;
 
@@ -90,23 +90,55 @@ transform: scale(1);
     background-color: #25D366;
  } */
 
- /* /|using media quarry maxwidth 400px|/ */
- @media screen and (max-width:540px) {
-    .icons-body{
-        bottom: 4rem;
-        position: fixed;
-        
-        margin-top: 3rem;
-    }
-
- }
  @media screen and (max-width:900px) {
-    .icons-body{
-        bottom: 7rem;
-        position: fixed;
-        margin-top: 4rem;
+     .icons-body{
+         bottom: 7rem;
+         position: fixed;
+         margin-top: 4rem;
+         
+         
+        }
+        ul li a{
+            position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 30px;
+        color: white;
+        transition: 0.s;
         
-
     }
+    
+}
+
+/* /|using media quarry maxwidth 400px|/ */
+@media screen and (max-width:540px) {
+   .icons-body{
+       bottom: 8rem;
+       margin-top: 5rem;
+   }
+   .icons{
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+   }
+   ul li {
+    list-style: none;
+    margin: 15px 15px;
+    display: inline-block;
+}
+   ul li{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+   
+   }
+   
 
 }
