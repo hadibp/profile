@@ -18,7 +18,7 @@ function Typing() {
         <p>
             I  {" "}
             <Typical
-        steps={['ABDUL HADI BP', 3000, ' am Flutter Developer', 3000 ,'Develop mobile apps',3000 ,'Convener of TECHSIAS'  ,3000]}
+        steps={['ABDUL HADI BP', 3000, ' am Flutter Developer', 3000 ,'Develop mobile apps',3000 ,'am ex-Convener of TECHSIAS'  ,3000]}
         loop={Infinity}
         wrapper="b"
       /></p>
