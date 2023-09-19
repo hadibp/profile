@@ -5,26 +5,22 @@ import './Typing.css'
 
 function Typing() {
     
-
-
     return (
         <div>
             <div className="image">
-  
             </div>
         <br />
-        
         <div className="typing" >
         <p>
             I  {" "}
             <Typical
-        steps={['am ABDUL HADI BP', 3000, ' am a Flutter Developer', 3000 ,'Develop mobile apps',3000 ,'am an ex-Convener of TECHSIAS'  ,3000,'currently working in fortlogic pvt. ltd'  ,3000]}
+        steps={['am ABDUL HADI BP', 3000, ' am a Flutter Developer', 3000 ,'Develop mobile apps',3000,'Develop REST FULL API in node js',3000 ,'am an ex-Convener of TECHSIAS'  ,3000,'currently working in fortlogic pvt. ltd'  ,3000]}
         loop={Infinity}
         wrapper="b"
       /></p>
         </div>
         </div>
->
+
     )
 }
 
