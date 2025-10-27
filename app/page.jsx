@@ -1,26 +1,15 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, MapPin, Github, Linkedin, Menu, X, Award } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Menu, X } from "lucide-react";
 import { portfolioData } from "./data/constants";
 import { useEffect, useState } from "react";
 import { ProjectCard } from "./componants/ProjectCard";
 import { ThreeBackground } from "./componants/ThreeBackground";
-
-const ThemeStyles = () => (
-  <style>
-    {`
-      @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap');
-      
-      body {
-        font-family: 'Play', sans-serif;
-      }
-
-      .font-display {
-        font-family: 'Press Start 2P', cursive;
-      }
-    `}
-  </style>
-);
+import { ThemeStyles } from "./style/ThemeStyles";
+import { SkillBar } from "./componants/SkillBar";
+import { TimelineCard } from "./componants/TimelineCard";
+import { CertificationCard } from "./componants/CertificationCard";
+import ReactGA from "react-ga4";
 
 // --- Reusable Components ---
 const Section = ({ id, title, children, className = "" }) => (
@@ -40,55 +29,30 @@ const Section = ({ id, title, children, className = "" }) => (
   </motion.section>
 );
 
-const SkillBar = ({ name, icon: Icon }) => (
-  <motion.div
-    className="bg-gray-900 border border-cyan-700/30 p-4 rounded-lg flex items-center space-x-4 shadow-lg shadow-cyan-500/5 relative overflow-hidden group"
-    whileHover={{ scale: 1.03 }}
-    transition={{ type: "spring", stiffness: 300 }}
-  >
-    <motion.div
-      className="absolute top-0 left-0 h-full bg-cyan-700/30 z-0"
-      initial={{ width: "0%" }}
-      whileHover={{ width: "100%" }}
-      transition={{ duration: 0.3 }}
-    />
-    <div className="relative z-10 flex items-center space-x-4">
-      <Icon className="w-8 h-8 text-cyan-300" />
-      <span className="text-gray-200 font-medium">{name}</span>
-    </div>
-  </motion.div>
-);
-
-const TimelineCard = ({ role, company, duration, description }) => (
-  <div className="relative pl-8 md:pl-12 py-4 border-l-2 border-cyan-700/50 group">
-    <div className="absolute -left-2 top-4 w-4 h-4 bg-cyan-700/50 rounded-full border-4 border-gray-950 group-hover:bg-cyan-300 transition-colors duration-300"></div>
-    <h3 className="text-xl font-semibold text-gray-100">{role}</h3>
-    <p className="text-cyan-300 mb-1">
-      {company} | {duration}
-    </p>
-    <p className="text-gray-400">{description}</p>
-  </div>
-);
-
-const CertificationCard = ({ name, source }) => (
-  <div className="bg-gray-900/50 border border-cyan-700/30 p-4 rounded-lg flex items-center space-x-4">
-    <Award className="w-6 h-6 text-cyan-300 shrink-0" />
-    <div>
-      <p className="text-gray-200 font-medium">{name}</p>
-      <p className="text-cyan-400 text-sm">{source}</p>
-    </div>
-  </div>
-);
-
 // --- Main App Component ---
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isThreeLoaded, setIsThreeLoaded] = useState(false);
 
-  // Effect to load the Three.js script
   useEffect(() => {
-    // Check if script is already loaded
+    const GA_MEASUREMENT_ID = "G-1LSKD37XN3";
+
+    if (GA_MEASUREMENT_ID !== "G-XXXXXXXXXX" && GA_MEASUREMENT_ID) {
+      try {
+        ReactGA.initialize(GA_MEASUREMENT_ID);
+        console.log("Google Analytics initialized.");
+      } catch (error) {
+        console.error("Error initializing Google Analytics:", error);
+      }
+    } else {
+      console.warn(
+        "Google Analytics Measurement ID is missing or still the placeholder."
+      );
+    }
+  }, []);
+
+  useEffect(() => {
     if (window.THREE) {
       setIsThreeLoaded(true);
       return;
@@ -107,11 +71,10 @@ export default function App() {
 
     document.body.appendChild(script);
 
-    // Cleanup script tag on component unmount
     return () => {
       document.body.removeChild(script);
     };
-  }, []); // Empty dependency array means this runs once on mount
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

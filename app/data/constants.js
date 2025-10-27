@@ -8,8 +8,8 @@ export const portfolioData = {
   email: "abdulhadibp@gmail.com",
   phone: "+91 7034037653",
   socials: {
-    github: "https://github.com/your-github-profile", // Replace with your actual GitHub URL
-    linkedin: "https://linkedin.com/in/your-linkedin-profile", // Replace with your actual LinkedIn URL
+    github: "https://github.com/hadibp", // Replace with your actual GitHub URL
+    linkedin: "https://linkedin.com/in/abdulhadibp", // Replace with your actual LinkedIn URL
   },
   about: "A passionate Senior Software Engineer with a strong background in building scalable web and mobile applications. Experienced in leading front-end architecture, mentoring developers, and collaborating with cross-functional teams to deliver high-quality products. Proficient in Next.js, React, Flutter, and modern web technologies, with a keen eye for UI/UX design and performance.",
   skills: [
@@ -101,13 +101,13 @@ export const portfolioData = {
       title: "Saj Resort Static Website",
       description: "A modern, responsive website for a luxury resort, focusing on performance and clean visual hierarchy.",
       technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      link: "#", // Replace with actual project link
+      link: "https://thesajresort.com/", // Replace with actual project link
     },
     {
       title: "Misty Peak - Resort Management",
       description: "A complete resort management system covering booking, inventory, and staff operations for web and mobile.",
       technologies: ["Flutter", "Next.js", "Node.js", "MongoDB"],
-      link: "#", // Replace with actual project link
+      link: "https://mistypeak-hadibps-projects.vercel.app/", // Replace with actual project link
     },
     {
       title: "Fugipie Inventory",
